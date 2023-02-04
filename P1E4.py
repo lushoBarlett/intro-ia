@@ -1,3 +1,7 @@
+from agent import Agent
+from node import Node
+from node_queue import DFSNodeQueue
+
 def t(grid, i, j):
     return tuple([grid[j] if n == i else grid[i] if n == j else grid[n] for n in range(len(grid))])
 
@@ -30,32 +34,15 @@ def zeroPos(grid):
         if x == 0:
             return i
 
-from agent import Agent, Node
+def expandGrid(grid):
+    z = zeroPos(grid)
 
-class DFSGridQueue:
-    def __init__(self, state):
-        self.nodes = [Node(state)]
-
-    def empty(self):
-        return self.nodes == []
-
-    def next(self):
-        return self.nodes.pop()
-
-    def expand(self, parent):
-
-        grid = parent.state
-
-        z = zeroPos(grid)
-
-        nextGrids = (
-            swap_up(z, grid) +
-            swap_right(z, grid) +
-            swap_down(z, grid) +
-            swap_left(z, grid)
-        )
-
-        self.nodes += [Node(g, parent) for g in nextGrids]
+    return (
+        swap_up(z, grid) +
+        swap_right(z, grid) +
+        swap_down(z, grid) +
+        swap_left(z, grid)
+    )
 
 initial = (
     2, 8, 3,
@@ -69,10 +56,12 @@ final = (
     7, 6, 5,
 )
 
-agent = Agent(initial, final, DFSGridQueue(initial))
+gridQueue = DFSNodeQueue(expandGrid)
+agent = Agent(initial, final, gridQueue)
+path = agent.go()
 
-result = agent.transition()
-while result is None:
-    result = agent.transition()
+if path is None:
+    print("No hay camino")
+    exit(1)
 
-print(f"Costo total: {len(result) - 1}")
+print(f"Movimientos totales: {len(path) - 1}")

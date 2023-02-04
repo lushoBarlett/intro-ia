@@ -1,26 +1,12 @@
-class Node:
-
-    def tracePath(node):
-        path = [node.state]
-
-        while node.parent is not None:
-            node = node.parent
-            path.append(node.state)
-
-        path.reverse()
-        return path
-
-    def __init__(self, state, parent = None):
-        self.state = state
-        self.parent = parent
+from node import Node
 
 class Agent:
 
     def __init__(self, initial, final, nodeQueue):
         self.visits = set()
+        self.initial = initial
         self.final = final
         self.nodeQueue = nodeQueue
-        self.moves = 0
 
     def visited(self, node):
         return node.state in self.visits
@@ -31,23 +17,28 @@ class Agent:
     def finalState(self, node):
         return node.state == self.final
 
-    def transition(self):
+    def next(self):
         if self.nodeQueue.empty():
-            return False
+            return None
 
         node = self.nodeQueue.next()
 
         while self.visited(node):
             if self.nodeQueue.empty():
-                return False
+                return None
 
             node = self.nodeQueue.next()
 
-        self.visit(node)
+        return node
 
-        if self.finalState(node):
-            return Node.tracePath(node)
+    def go(self):
 
-        self.nodeQueue.expand(node)
+        self.nodeQueue.start(self.initial)
 
-        return None
+        current = None
+        while current is None or not self.finalState(current):
+            current = self.next()
+            self.visit(current)
+            self.nodeQueue.expand(current)
+
+        return Node.tracePath(current)
