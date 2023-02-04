@@ -59,3 +59,17 @@ if path is None:
 
 print(f"Movimientos totales: {len(path) - 1}")
 print(f"Costo: {cost}")
+
+
+def h1(grid):
+    return sum(int(i != grid.index(x)) for i, x in enumerate(final) if x != 0)
+
+
+def h2(grid):
+
+    def mdist(i, j):
+        hdist = abs(i % 3 - j % 3)
+        vdist = abs(i // 3 - j // 3)
+        return hdist + vdist
+
+    return sum(mdist(i, grid.index(x)) for i, x in enumerate(final) if x != 0)
