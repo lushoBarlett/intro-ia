@@ -1,4 +1,6 @@
 from abc import ABC, abstractmethod
+from collections import deque
+from heapq import heappush, heappop
 from node import Node
 
 class NodeQueue(ABC):
@@ -23,41 +25,41 @@ class NodeQueue(ABC):
 class DFSNodeQueue(NodeQueue):
 
     def __init__(self, expander):
-        self.nodes = []
+        self.nodes = deque([])
         self.expander = expander
 
     def start(self, state):
-        self.nodes = [Node(state)]
+        self.nodes = deque([Node(state)])
 
     def empty(self):
-        return self.nodes == []
+        return len(self.nodes) == 0
 
     def next(self):
         return self.nodes.pop()
 
     def expand(self, parent):
-        nextStates = self.expander(parent.state)
-        self.nodes += [parent.spawn_child(s) for s in nextStates]
+        for s in self.expander(parent.state):
+            self.nodes.append(parent.spawn_child(s))
 
 
 class BFSNodeQueue(NodeQueue):
 
     def __init__(self, expander):
-        self.nodes = []
+        self.nodes = deque([])
         self.expander = expander
 
     def start(self, state):
-        self.nodes = [Node(state)]
+        self.nodes = deque([Node(state)])
 
     def empty(self):
-        return self.nodes == []
+        return len(self.nodes) == 0
 
     def next(self):
-        return self.nodes.pop(0)
+        return self.nodes.popleft()
 
     def expand(self, parent):
-        nextStates = self.expander(parent.state)
-        self.nodes += [parent.spawn_child(s) for s in nextStates]
+        for s in self.expander(parent.state):
+            self.nodes.append(parent.spawn_child(s))
 
 
 class BestFirstNodeQueue(NodeQueue):
@@ -70,12 +72,12 @@ class BestFirstNodeQueue(NodeQueue):
         self.nodes = [Node(state)]
 
     def empty(self):
-        return self.nodes == []
+        return len(self.nodes) == 0
 
     def next(self):
-        return min(self.nodes)
+        return heappop(self.nodes)
 
     def expand(self, parent):
-        nextStatesAndCosts = self.expander(parent.state)
-        self.nodes += [parent.spawn_child(s, c) for s, c in nextStatesAndCosts]
+        for s, c in self.expander(parent.state):
+            heappush(self.nodes, parent.spawn_child(s, c))
 
