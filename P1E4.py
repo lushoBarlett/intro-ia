@@ -1,7 +1,7 @@
 from agent import Agent
 from node import Node
 from node_queue import DFSNodeQueue
-from visit_registry import VisitAll
+from visit_registry import VisitParent
 
 def t(grid, i, j):
     return tuple([grid[j] if n == i else grid[i] if n == j else grid[n] for n in range(len(grid))])
@@ -58,8 +58,9 @@ final = (
 )
 
 grid_queue = DFSNodeQueue(expand_grid)
-visit_strategy = VisitAll()
-agent = Agent(initial, final, grid_queue, visit_strategy, max_depth=10)
+visit_strategy = VisitParent()
+configurations = 9*8*7*6*5*4*3*2*1
+agent = Agent(initial, final, grid_queue, visit_strategy, max_depth=configurations)
 path, cost = agent.go()
 
 if path is None:
