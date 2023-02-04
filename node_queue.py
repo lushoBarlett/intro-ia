@@ -37,7 +37,7 @@ class DFSNodeQueue(NodeQueue):
 
     def expand(self, parent):
         nextStates = self.expander(parent.state)
-        self.nodes += [Node(s, parent.cost + 1, parent) for s in nextStates]
+        self.nodes += [parent.spawn_child(s) for s in nextStates]
 
 
 class BFSNodeQueue(NodeQueue):
@@ -57,7 +57,7 @@ class BFSNodeQueue(NodeQueue):
 
     def expand(self, parent):
         nextStates = self.expander(parent.state)
-        self.nodes += [Node(s, parent.cost + 1, parent) for s in nextStates]
+        self.nodes += [parent.spawn_child(s) for s in nextStates]
 
 
 class BestFirstNodeQueue(NodeQueue):
@@ -77,5 +77,5 @@ class BestFirstNodeQueue(NodeQueue):
 
     def expand(self, parent):
         nextStatesAndCosts = self.expander(parent.state)
-        self.nodes += [Node(s, parent.cost + c, parent) for s, c in nextStatesAndCosts]
+        self.nodes += [parent.spawn_child(s, c) for s, c in nextStatesAndCosts]
 

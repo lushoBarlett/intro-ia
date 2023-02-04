@@ -1,6 +1,7 @@
 from agent import Agent
 from node import Node
 from node_queue import DFSNodeQueue
+from visit_registry import VisitAll
 
 def t(grid, i, j):
     return tuple([grid[j] if n == i else grid[i] if n == j else grid[n] for n in range(len(grid))])
@@ -29,13 +30,13 @@ def swap_right(pos, grid):
 
     return [t(grid, pos, pos + 1)]
 
-def zeroPos(grid):
+def zero_pos(grid):
     for i, x in enumerate(grid):
         if x == 0:
             return i
 
-def expandGrid(grid):
-    z = zeroPos(grid)
+def expand_grid(grid):
+    z = zero_pos(grid)
 
     return (
         swap_up(z, grid) +
@@ -56,8 +57,9 @@ final = (
     7, 6, 5,
 )
 
-gridQueue = DFSNodeQueue(expandGrid)
-agent = Agent(initial, final, gridQueue)
+grid_queue = DFSNodeQueue(expand_grid)
+visit_strategy = VisitAll()
+agent = Agent(initial, final, grid_queue, visit_strategy, max_depth=10)
 path, cost = agent.go()
 
 if path is None:
