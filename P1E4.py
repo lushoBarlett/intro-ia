@@ -1,48 +1,38 @@
+from itertools import chain
 from agent import Agent
 from node import Node
 from node_queue import DFSNodeQueue
 from visit_registry import VisitParent
 
 def t(grid, i, j):
-    return tuple([grid[j] if n == i else grid[i] if n == j else grid[n] for n in range(len(grid))])
+    grid = list(grid)
+    grid[i], grid[j] = grid[j], grid[i]
+    return tuple(grid)
 
 def swap_up(pos, grid):
-    if pos < 3:
-        return []
-
-    return [t(grid, pos, pos - 3)]
+    if pos >= 3:
+        yield t(grid, pos, pos - 3)
 
 def swap_down(pos, grid):
-    if pos > 5:
-        return []
-
-    return [t(grid, pos, pos + 3)]
+    if pos < 6:
+        yield t(grid, pos, pos + 3)
 
 def swap_left(pos, grid):
-    if pos % 3 == 0:
-        return []
-
-    return [t(grid, pos, pos - 1)]
+    if pos % 3 > 0:
+        yield t(grid, pos, pos - 1)
 
 def swap_right(pos, grid):
-    if pos % 3 == 2:
-        return []
-
-    return [t(grid, pos, pos + 1)]
-
-def zero_pos(grid):
-    for i, x in enumerate(grid):
-        if x == 0:
-            return i
+    if pos % 3 < 2:
+        yield t(grid, pos, pos + 1)
 
 def expand_grid(grid):
-    z = zero_pos(grid)
+    z = grid.index(0)
 
-    return (
-        swap_up(z, grid) +
-        swap_right(z, grid) +
-        swap_down(z, grid) +
-        swap_left(z, grid)
+    return chain(
+        swap_up(z, grid),
+        swap_right(z, grid),
+        swap_down(z, grid),
+        swap_left(z, grid),
     )
 
 initial = (
