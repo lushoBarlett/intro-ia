@@ -10,7 +10,10 @@ class Node:
         path.reverse()
         return path
 
-    def __init__(self, state, parent = None):
+    def __init__(self, state, cost = 0, parent = None):
         self.state = state
+        self.cost = cost
         self.parent = parent
 
+    def __lt__(self, other):
+        return self.cost < other.cost

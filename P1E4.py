@@ -58,10 +58,11 @@ final = (
 
 gridQueue = DFSNodeQueue(expandGrid)
 agent = Agent(initial, final, gridQueue)
-path = agent.go()
+path, cost = agent.go()
 
 if path is None:
     print("No hay camino")
     exit(1)
 
 print(f"Movimientos totales: {len(path) - 1}")
+print(f"Costo: {cost}")

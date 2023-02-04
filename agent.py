@@ -41,4 +41,4 @@ class Agent:
             self.visit(current)
             self.nodeQueue.expand(current)
 
-        return Node.tracePath(current)
+        return Node.tracePath(current), current.cost
