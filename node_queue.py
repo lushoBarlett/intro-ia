@@ -28,6 +28,7 @@ class DFSNodeQueue(NodeQueue):
         self.nodes = deque([])
         self.expander = expander
         self.heuristic = heuristic
+        self.expansion = 0
 
     def start(self, state):
         self.nodes = deque([Node(state, hcost=self.heuristic(state))])
@@ -39,8 +40,9 @@ class DFSNodeQueue(NodeQueue):
         return self.nodes.pop()
 
     def expand(self, parent):
+        self.expansion += 1
         for s, c, h in self.expander(parent.state, self.heuristic):
-            self.nodes.append(parent.spawn_child(s, c, h))
+            self.nodes.append(parent.spawn_child(s, c, h, self.expansion))
 
 
 class BFSNodeQueue(NodeQueue):
@@ -49,6 +51,7 @@ class BFSNodeQueue(NodeQueue):
         self.nodes = deque([])
         self.expander = expander
         self.heuristic = heuristic
+        self.expansion = 0
 
     def start(self, state):
         self.nodes = deque([Node(state, hcost=self.heuristic(state))])
@@ -60,8 +63,9 @@ class BFSNodeQueue(NodeQueue):
         return self.nodes.popleft()
 
     def expand(self, parent):
+        self.expansion += 1
         for s, c, h in self.expander(parent.state, self.heuristic):
-            self.nodes.append(parent.spawn_child(s, c, h))
+            self.nodes.append(parent.spawn_child(s, c, h, self.expansion))
 
 
 class AstarNodeQueue(NodeQueue):
@@ -70,6 +74,7 @@ class AstarNodeQueue(NodeQueue):
         self.nodes = []
         self.expander = expander
         self.heuristic = heuristic
+        self.expansion = 0
 
     def start(self, state):
         self.nodes = [Node(state, hcost=self.heuristic(state))]
@@ -81,6 +86,7 @@ class AstarNodeQueue(NodeQueue):
         return heappop(self.nodes)
 
     def expand(self, parent):
+        self.expansion += 1
         for s, c, h in self.expander(parent.state, self.heuristic):
-            heappush(self.nodes, parent.spawn_child(s, c, h))
+            heappush(self.nodes, parent.spawn_child(s, c, h, self.expansion))
 
