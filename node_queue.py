@@ -41,7 +41,8 @@ class DFSNodeQueue(NodeQueue):
 
     def expand(self, parent):
         self.expansion += 1
-        for s, c, h in reversed(list(self.expander(parent.state, self.heuristic))):
+        for s, c in reversed(list(self.expander(parent.state))):
+            h = self.heuristic(s)
             self.nodes.append(parent.spawn_child(s, c, h, self.expansion))
 
 
@@ -64,7 +65,8 @@ class BFSNodeQueue(NodeQueue):
 
     def expand(self, parent):
         self.expansion += 1
-        for s, c, h in self.expander(parent.state, self.heuristic):
+        for s, c in self.expander(parent.state):
+            h = self.heuristic(s)
             self.nodes.append(parent.spawn_child(s, c, h, self.expansion))
 
 
@@ -87,7 +89,8 @@ class AstarNodeQueue(NodeQueue):
 
     def expand(self, parent):
         self.expansion += 1
-        for s, c, h in self.expander(parent.state, self.heuristic):
+        for s, c in self.expander(parent.state):
+            h = self.heuristic(s)
             heappush(self.nodes, parent.spawn_child(s, c, h, self.expansion))
 
 
@@ -114,8 +117,9 @@ class HillClimbing(NodeQueue):
         self.expansion += 1
 
         next_node = None
-        for s, c, h in self.expander(parent.state, self.heuristic):
-            n = Node(s, 0, self.heuristic(s), None, parent.depth + 1, self.expansion)
+        for s, in self.expander(parent.state):
+            h = self.heuristic(s)
+            n = Node(s, 0, h, None, parent.depth + 1, self.expansion)
 
             if next_node is None or not next_node < n:
                 next_node = n

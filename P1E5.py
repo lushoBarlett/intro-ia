@@ -30,10 +30,10 @@ edges = [
     ("Iasi", "Neamt", 87),
 ]
 
-def expand_city(city, h):
+def expand_city(city):
     return chain(
-        ((city2, cost, h(city2)) for city1, city2, cost in edges if city1 == city),
-        ((city1, cost, h(city1)) for city1, city2, cost in edges if city2 == city),
+        ((city2, cost) for city1, city2, cost in edges if city1 == city),
+        ((city1, cost) for city1, city2, cost in edges if city2 == city),
     )
 
 visit_strategy = VisitNone()

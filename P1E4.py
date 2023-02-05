@@ -25,7 +25,7 @@ def swap_right(pos, grid):
     if pos % 3 < 2:
         yield t(grid, pos, pos + 1)
 
-def expand_grid(grid, h):
+def expand_grid(grid):
     z = grid.index(0)
 
     grid_states = chain(
@@ -35,7 +35,7 @@ def expand_grid(grid, h):
         swap_left(z, grid),
     )
 
-    return ((s, 1, h(s)) for s in grid_states)
+    return ((s, 1) for s in grid_states)
 
 initial = (
     2, 8, 3,

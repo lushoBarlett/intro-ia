@@ -21,8 +21,8 @@ edges = [
     ("I", "C", 1),
 ]
 
-def expand(state, h):
-    return ((state2, cost, h(state2)) for state1, state2, cost in edges if state1 == state)
+def expand(state):
+    return ((state2, cost) for state1, state2, cost in edges if state1 == state)
 
 def final(state):
     return state in ("G1", "G2")
