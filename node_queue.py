@@ -41,7 +41,7 @@ class DFSNodeQueue(NodeQueue):
 
     def expand(self, parent):
         self.expansion += 1
-        for s, c, h in self.expander(parent.state, self.heuristic):
+        for s, c, h in reversed(list(self.expander(parent.state, self.heuristic))):
             self.nodes.append(parent.spawn_child(s, c, h, self.expansion))
 
 
