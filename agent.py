@@ -39,4 +39,4 @@ class Agent:
             self.visit_registry.visit(current)
             self.node_queue.expand(current)
 
-        return Node.trace_path(current), current.cost
+        return Node.trace_path(current), current.total_cost()
