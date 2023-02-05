@@ -10,6 +10,9 @@ class Agent:
         self.max_depth = max_depth
 
     def final_state(self, node):
+        if callable(self.final):
+            return self.final(node.state)
+
         return node.state == self.final
 
     def over_depth_limit(self, node):
