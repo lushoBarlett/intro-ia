@@ -1,0 +1,405 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/lusho/ontologies/2023/1/untitled-ontology-3"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/lusho/ontologies/2023/1/untitled-ontology-3">
+    <Prefix name="" IRI="http://www.semanticweb.org/lusho/ontologies/2023/1/untitled-ontology-3"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Alas"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Animal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ave"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Caliente"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Caparazón"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CaracterísticaAnimal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Extremidades"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fría"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Huevo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HábitatAnimal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Invertebrado"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mamas"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mamífero"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Marsupio"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Movimiento"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pelo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Placenta"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Plumas"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Protección"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Reproducción"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Reptil"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sangre"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Vertebrado"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#enHábitat"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#seMueve"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#seProtege"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#seReproduce"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#tieneMamas"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#tieneSangre"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Alas"/>
+        <Class IRI="#Movimiento"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ave"/>
+        <Class IRI="#Vertebrado"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ave"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#seMueve"/>
+            <Class IRI="#Alas"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ave"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#seProtege"/>
+            <Class IRI="#Plumas"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ave"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#seReproduce"/>
+            <Class IRI="#Huevo"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ave"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#tieneSangre"/>
+            <Class IRI="#Caliente"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Caliente"/>
+        <Class IRI="#Sangre"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Caparazón"/>
+        <Class IRI="#Protección"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Extremidades"/>
+        <Class IRI="#Movimiento"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fría"/>
+        <Class IRI="#Sangre"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Huevo"/>
+        <Class IRI="#Reproducción"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Invertebrado"/>
+        <Class IRI="#Animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mamas"/>
+        <Class IRI="#CaracterísticaAnimal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mamífero"/>
+        <Class IRI="#Vertebrado"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mamífero"/>
+        <ObjectUnionOf>
+            <Class IRI="#Marsupio"/>
+            <Class IRI="#Placenta"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#seReproduce"/>
+                <Class IRI="#Huevo"/>
+            </ObjectSomeValuesFrom>
+        </ObjectUnionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mamífero"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#enHábitat"/>
+            <Class IRI="#HábitatAnimal"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mamífero"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#seProtege"/>
+            <Class IRI="#Pelo"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mamífero"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#tieneMamas"/>
+            <Class IRI="#Mamas"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mamífero"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#tieneSangre"/>
+            <Class IRI="#Caliente"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Marsupio"/>
+        <Class IRI="#Reproducción"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Movimiento"/>
+        <Class IRI="#CaracterísticaAnimal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pelo"/>
+        <Class IRI="#Protección"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Placenta"/>
+        <Class IRI="#Reproducción"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Plumas"/>
+        <Class IRI="#Protección"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Protección"/>
+        <Class IRI="#CaracterísticaAnimal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Reproducción"/>
+        <Class IRI="#CaracterísticaAnimal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Reptil"/>
+        <Class IRI="#Vertebrado"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Reptil"/>
+        <ObjectUnionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#seMueve"/>
+                <Class IRI="#Extremidades"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#seProtege"/>
+                <Class IRI="#Caparazón"/>
+            </ObjectSomeValuesFrom>
+        </ObjectUnionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Reptil"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#enHábitat"/>
+            <Class IRI="#HábitatAnimal"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Reptil"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#seReproduce"/>
+            <Class IRI="#Huevo"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Reptil"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#tieneSangre"/>
+            <Class IRI="#Fría"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sangre"/>
+        <Class IRI="#CaracterísticaAnimal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Vertebrado"/>
+        <Class IRI="#Animal"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Alas"/>
+        <Class IRI="#Extremidades"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Ave"/>
+        <Class IRI="#Mamífero"/>
+        <Class IRI="#Reptil"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Caliente"/>
+        <Class IRI="#Fría"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Caparazón"/>
+        <Class IRI="#Pelo"/>
+        <Class IRI="#Plumas"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Huevo"/>
+        <Class IRI="#Marsupio"/>
+        <Class IRI="#Placenta"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Invertebrado"/>
+        <Class IRI="#Vertebrado"/>
+    </DisjointClasses>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#enHábitat"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#seMueve"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#seProtege"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#seReproduce"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#tieneMamas"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#tieneSangre"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#enHábitat"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#seMueve"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#seProtege"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#seReproduce"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#tieneMamas"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#tieneSangre"/>
+    </FunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#enHábitat"/>
+        <Class IRI="#Animal"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#seMueve"/>
+        <Class IRI="#Animal"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#seProtege"/>
+        <Class IRI="#Animal"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#seReproduce"/>
+        <Class IRI="#Animal"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#tieneMamas"/>
+        <Class IRI="#Animal"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#tieneSangre"/>
+        <Class IRI="#Animal"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#enHábitat"/>
+        <Class IRI="#HábitatAnimal"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#seMueve"/>
+        <Class IRI="#Movimiento"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#seProtege"/>
+        <Class IRI="#Protección"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#seReproduce"/>
+        <Class IRI="#Reproducción"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#tieneMamas"/>
+        <Class IRI="#Mamas"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#tieneSangre"/>
+        <Class IRI="#Sangre"/>
+    </ObjectPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
