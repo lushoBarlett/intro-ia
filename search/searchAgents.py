@@ -456,36 +456,24 @@ def foodHeuristic(state, problem):
       problem.heuristicInfo['wallCount'] = problem.walls.count()
     Subsequent calls to this heuristic can access problem.heuristicInfo['wallCount']
     """
-    position, foodGrid = state
+    pacman, foodGrid = state
     foodPositions = foodGrid.asList()
+
+    manhattan = lambda p, q: abs(p[0] - q[0]) + abs(p[1] - q[1])
 
     if foodPositions == []:
         return 0
 
-    mandist = lambda p, q: abs(p[0] - q[0]) + abs(p[1] - q[1])
+    def closest_food(start):
+        return min((manhattan(start, food), food) for food in foodPositions)
 
-    #distances = [(foodPos, mandist(position, foodPos)) for foodPos in foodPositions]
+    def farthest_food(start):
+        return max((manhattan(start, food), food) for food in foodPositions)
 
-    #smallestDistanceToFood = max(problem.walls.height,problem.walls.width)
-    #nearestFoodPos = (0,0)
-    #for p,d in distances:
-    #    if d < smallestDistanceToFood:
-    #        smallestDistanceToFood = d
-    #        nearestFoodPos = p
+    mind, minfood = closest_food(pacman)
+    food_diameter, _ = farthest_food(minfood)
 
-    #smallestDistanceToFood = min(mandist(position,foodPos) for foodPos in foodPositions)
-
-    #foodPositions.remove(nearestFoodPos)
-    foodLeft = len(foodPositions)
-
-    #if foodPositions == []:
-    #    newNearest = 0
-    #else:
-    #    newNearest = min([mandist(nearestFoodPos,p) for p in foodPositions])
-    #return smallestDistanceToFood + foodLeft * newNearest
-    return foodLeft
-    #return 0
-    #return smallestDistanceToFood
+    return mind + food_diameter
 
 
 class ClosestDotSearchAgent(SearchAgent):
