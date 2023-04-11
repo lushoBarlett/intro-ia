@@ -353,18 +353,21 @@ def cornersHeuristic(state, problem):
     corners = problem.corners # These are the corner coordinates
     walls = problem.walls # These are the walls of the maze, as a Grid (game.py)
 
-    corners_left = [c for c, v in zip(corners, state[1:]) if not v]
+    manhattan = lambda p, q: abs(p[0] - q[0]) + abs(p[1] - q[1])
 
-    if corners_left == []:
-        return 0
+    def compute_path(pacman, strategy):
+        total = 0
+        for corner in strategy:
+            total += manhattan(pacman, corner)
+            pacman = corner
+        return total
 
-    mandist = lambda p, q: abs(p[0] - q[0]) + abs(p[1] - q[1])
+    pacman = state[0]
+    corners_left = (corner for corner, visited in zip(corners, state[1:]) if not visited)
 
-    d = min(mandist(state[0], c) for c in corners_left)
-    sideLen = min(walls.height-1, walls.width-1)
+    from itertools import permutations
 
-    return d + (len(corners_left)-1) * sideLen
-    #return d + 2 * (walls.height - 1) + 2 * (walls.width - 1) - 1
+    return min(compute_path(pacman, visit_strategy) for visit_strategy in permutations(corners_left))
 
 class AStarCornersAgent(SearchAgent):
     "A SearchAgent for FoodSearchProblem using A* and your foodHeuristic"

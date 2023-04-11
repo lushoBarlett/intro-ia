@@ -87,10 +87,12 @@ def search(problem, fringe):
                 fringe.push(candidate)
 
 class Node:
-    def __init__(self, state, action = None, parent = None):
+    def __init__(self, state, action = None, parent = None, g=0, f=0):
         self.state = state
         self.action = action
         self.parent = parent
+        self.g = g
+        self.f = f
 
 def actions_performed_by(node):
     actions = []
@@ -208,8 +210,11 @@ def aStarSearch(problem, heuristic=nullHeuristic):
 
         for state, action, cost in problem.getSuccessors(current.state):
             if state not in visited:
+                g = current.g + cost
+                f = g + heuristic(state, problem)
+                f = max(current.f, f)
                 visited.add(state)
-                nodes.push(Node(state, action, current), cost + heuristic(state, problem))
+                nodes.push(Node(state, action, current, g, f), f)
 
 # Abbreviations
 bfs = breadthFirstSearch
