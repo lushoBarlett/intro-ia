@@ -181,8 +181,9 @@ def uniformCostSearch(problem):
 
         for state, action, cost in problem.getSuccessors(current.state):
             if state not in visited:
+                g = current.g + cost
                 visited.add(state)
-                nodes.push(Node(state, action, current), cost)
+                nodes.push(Node(state, action, current, g), g)
 
 def nullHeuristic(state, problem=None):
     """
