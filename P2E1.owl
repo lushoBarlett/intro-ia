@@ -1,52 +1,31 @@
 <?xml version="1.0"?>
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://www.semanticweb.org/lusho/ontologies/2023/1/untitled-ontology-3"
+     xml:base="http://www.semanticweb.org/lusho/ontologies/2023/1/E1-Animals"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="http://www.semanticweb.org/lusho/ontologies/2023/1/untitled-ontology-3">
-    <Prefix name="" IRI="http://www.semanticweb.org/lusho/ontologies/2023/1/untitled-ontology-3"/>
+     ontologyIRI="http://www.semanticweb.org/lusho/ontologies/2023/1/E1-Animals">
+    <Prefix name="" IRI="http://www.semanticweb.org/lusho/ontologies/2023/1/E1-Animals"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Declaration>
-        <Class IRI="#Alas"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Animal"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Ave"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Caliente"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Caparazón"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#CaracterísticaAnimal"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Extremidades"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Fría"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Huevo"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#HábitatAnimal"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Invertebrado"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Mamas"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Mamífero"/>
@@ -55,19 +34,7 @@
         <Class IRI="#Marsupio"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Movimiento"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Pelo"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Placenta"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Plumas"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Protección"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Reproducción"/>
@@ -82,44 +49,41 @@
         <Class IRI="#Vertebrado"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#enHábitat"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#seMueve"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#seProtege"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#seReproduce"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#tieneMamas"/>
+        <ObjectProperty IRI="#tipoSangre"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#tieneSangre"/>
+        <DataProperty IRI="#alasConPlumas"/>
     </Declaration>
-    <SubClassOf>
-        <Class IRI="#Alas"/>
-        <Class IRI="#Movimiento"/>
-    </SubClassOf>
+    <Declaration>
+        <DataProperty IRI="#caparazón"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#columnaVertebral"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#extremidades"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hábitat"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#mamas"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#pelo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SangreCaliente"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SangreFría"/>
+    </Declaration>
     <SubClassOf>
         <Class IRI="#Ave"/>
         <Class IRI="#Vertebrado"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Ave"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#seMueve"/>
-            <Class IRI="#Alas"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Ave"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#seProtege"/>
-            <Class IRI="#Plumas"/>
-        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Ave"/>
@@ -130,26 +94,17 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Ave"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#tieneSangre"/>
-            <Class IRI="#Caliente"/>
-        </ObjectSomeValuesFrom>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#tipoSangre"/>
+            <NamedIndividual IRI="#SangreCaliente"/>
+        </ObjectHasValue>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Caliente"/>
-        <Class IRI="#Sangre"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Caparazón"/>
-        <Class IRI="#Protección"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Extremidades"/>
-        <Class IRI="#Movimiento"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Fría"/>
-        <Class IRI="#Sangre"/>
+        <Class IRI="#Ave"/>
+        <DataHasValue>
+            <DataProperty IRI="#alasConPlumas"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </DataHasValue>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Huevo"/>
@@ -160,8 +115,11 @@
         <Class IRI="#Animal"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Mamas"/>
-        <Class IRI="#CaracterísticaAnimal"/>
+        <Class IRI="#Invertebrado"/>
+        <DataHasValue>
+            <DataProperty IRI="#columnaVertebral"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+        </DataHasValue>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Mamífero"/>
@@ -169,66 +127,46 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Mamífero"/>
-        <ObjectUnionOf>
-            <Class IRI="#Marsupio"/>
-            <Class IRI="#Placenta"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#seReproduce"/>
-                <Class IRI="#Huevo"/>
-            </ObjectSomeValuesFrom>
-        </ObjectUnionOf>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Mamífero"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#enHábitat"/>
-            <Class IRI="#HábitatAnimal"/>
+            <ObjectProperty IRI="#seReproduce"/>
+            <Class IRI="#Reproducción"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Mamífero"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#seProtege"/>
-            <Class IRI="#Pelo"/>
-        </ObjectSomeValuesFrom>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#tipoSangre"/>
+            <NamedIndividual IRI="#SangreCaliente"/>
+        </ObjectHasValue>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Mamífero"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#tieneMamas"/>
-            <Class IRI="#Mamas"/>
-        </ObjectSomeValuesFrom>
+        <DataHasValue>
+            <DataProperty IRI="#hábitat"/>
+            <Literal>variado</Literal>
+        </DataHasValue>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Mamífero"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#tieneSangre"/>
-            <Class IRI="#Caliente"/>
-        </ObjectSomeValuesFrom>
+        <DataHasValue>
+            <DataProperty IRI="#mamas"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mamífero"/>
+        <DataHasValue>
+            <DataProperty IRI="#pelo"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </DataHasValue>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Marsupio"/>
         <Class IRI="#Reproducción"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Movimiento"/>
-        <Class IRI="#CaracterísticaAnimal"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Pelo"/>
-        <Class IRI="#Protección"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Placenta"/>
         <Class IRI="#Reproducción"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Plumas"/>
-        <Class IRI="#Protección"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Protección"/>
-        <Class IRI="#CaracterísticaAnimal"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Reproducción"/>
@@ -241,22 +179,15 @@
     <SubClassOf>
         <Class IRI="#Reptil"/>
         <ObjectUnionOf>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#seMueve"/>
-                <Class IRI="#Extremidades"/>
-            </ObjectSomeValuesFrom>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#seProtege"/>
-                <Class IRI="#Caparazón"/>
-            </ObjectSomeValuesFrom>
+            <DataHasValue>
+                <DataProperty IRI="#caparazón"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataHasValue>
+            <DataHasValue>
+                <DataProperty IRI="#extremidades"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataHasValue>
         </ObjectUnionOf>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Reptil"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#enHábitat"/>
-            <Class IRI="#HábitatAnimal"/>
-        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Reptil"/>
@@ -267,10 +198,17 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Reptil"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#tieneSangre"/>
-            <Class IRI="#Fría"/>
-        </ObjectSomeValuesFrom>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#tipoSangre"/>
+            <NamedIndividual IRI="#SangreFría"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Reptil"/>
+        <DataHasValue>
+            <DataProperty IRI="#hábitat"/>
+            <Literal>variado</Literal>
+        </DataHasValue>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Sangre"/>
@@ -280,23 +218,21 @@
         <Class IRI="#Vertebrado"/>
         <Class IRI="#Animal"/>
     </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Vertebrado"/>
+        <DataHasValue>
+            <DataProperty IRI="#columnaVertebral"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </DataHasValue>
+    </SubClassOf>
     <DisjointClasses>
-        <Class IRI="#Alas"/>
-        <Class IRI="#Extremidades"/>
+        <Class IRI="#Animal"/>
+        <Class IRI="#CaracterísticaAnimal"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Ave"/>
         <Class IRI="#Mamífero"/>
         <Class IRI="#Reptil"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#Caliente"/>
-        <Class IRI="#Fría"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#Caparazón"/>
-        <Class IRI="#Pelo"/>
-        <Class IRI="#Plumas"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Huevo"/>
@@ -307,96 +243,135 @@
         <Class IRI="#Invertebrado"/>
         <Class IRI="#Vertebrado"/>
     </DisjointClasses>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#enHábitat"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#seMueve"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#seProtege"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
+    <DisjointClasses>
+        <Class IRI="#Reproducción"/>
+        <Class IRI="#Sangre"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Sangre"/>
+        <NamedIndividual IRI="#SangreCaliente"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Sangre"/>
+        <NamedIndividual IRI="#SangreFría"/>
+    </ClassAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#seReproduce"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#tieneMamas"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#tieneSangre"/>
+        <ObjectProperty IRI="#tipoSangre"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <FunctionalObjectProperty>
-        <ObjectProperty IRI="#enHábitat"/>
+        <ObjectProperty IRI="#tipoSangre"/>
     </FunctionalObjectProperty>
-    <FunctionalObjectProperty>
-        <ObjectProperty IRI="#seMueve"/>
-    </FunctionalObjectProperty>
-    <FunctionalObjectProperty>
-        <ObjectProperty IRI="#seProtege"/>
-    </FunctionalObjectProperty>
-    <FunctionalObjectProperty>
-        <ObjectProperty IRI="#seReproduce"/>
-    </FunctionalObjectProperty>
-    <FunctionalObjectProperty>
-        <ObjectProperty IRI="#tieneMamas"/>
-    </FunctionalObjectProperty>
-    <FunctionalObjectProperty>
-        <ObjectProperty IRI="#tieneSangre"/>
-    </FunctionalObjectProperty>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#enHábitat"/>
-        <Class IRI="#Animal"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#seMueve"/>
-        <Class IRI="#Animal"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#seProtege"/>
-        <Class IRI="#Animal"/>
-    </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#seReproduce"/>
-        <Class IRI="#Animal"/>
+        <Class IRI="#Vertebrado"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#tieneMamas"/>
-        <Class IRI="#Animal"/>
+        <ObjectProperty IRI="#tipoSangre"/>
+        <Class IRI="#Vertebrado"/>
     </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#tieneSangre"/>
-        <Class IRI="#Animal"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#enHábitat"/>
-        <Class IRI="#HábitatAnimal"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#seMueve"/>
-        <Class IRI="#Movimiento"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#seProtege"/>
-        <Class IRI="#Protección"/>
-    </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#seReproduce"/>
         <Class IRI="#Reproducción"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#tieneMamas"/>
-        <Class IRI="#Mamas"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#tieneSangre"/>
+        <ObjectProperty IRI="#tipoSangre"/>
         <Class IRI="#Sangre"/>
     </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#alasConPlumas"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#caparazón"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#columnaVertebral"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#extremidades"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hábitat"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#mamas"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#pelo"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#columnaVertebral"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hábitat"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#alasConPlumas"/>
+        <Class IRI="#Ave"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#caparazón"/>
+        <Class IRI="#Reptil"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#columnaVertebral"/>
+        <Class IRI="#Animal"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#extremidades"/>
+        <Class IRI="#Reptil"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hábitat"/>
+        <Class IRI="#Animal"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#mamas"/>
+        <Class IRI="#Mamífero"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#pelo"/>
+        <Class IRI="#Mamífero"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#alasConPlumas"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#caparazón"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#columnaVertebral"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#extremidades"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hábitat"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#mamas"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#pelo"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
 </Ontology>
 
 
