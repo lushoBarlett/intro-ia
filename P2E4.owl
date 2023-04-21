@@ -1,0 +1,378 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/lusho/ontologies/2023/3/Música#"
+     xml:base="http://www.semanticweb.org/lusho/ontologies/2023/3/Música"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/Música"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#contratoCon -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#contratoCon">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Bandas"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#CompañíasDiscográficas"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#formadaPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#formadaPor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#perteneceA"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#grabación -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#grabación">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#ÁlbumesMusicales"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#FormasGrabación"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#género -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#género">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#ÁlbumesMusicales"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#GénerosMusicales"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#hechoPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#hechoPor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#hizo"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#hizo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#hizo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Músicos"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#ÁlbumesMusicales"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#perteneceA -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#perteneceA">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Músicos"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Bandas"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#toca -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#toca">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Músicos"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Instrumentos"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#canciones -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#canciones">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#ÁlbumesMusicales"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#pistas -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#pistas">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#ÁlbumesMusicales"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#platillosTomsYBombo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#platillosTomsYBombo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Percusión"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#premios -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#premios">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Bandas"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Bandas -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Bandas"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Baterías -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Baterías">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Percusión"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#platillosTomsYBombo"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Percusión"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Tambores"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#CompañíasDiscográficas -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#CompañíasDiscográficas"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Cuerda -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Cuerda">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Instrumentos"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#FormasGrabación -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#FormasGrabación"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#GénerosMusicales -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#GénerosMusicales"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Instrumentos -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Instrumentos"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Músicos -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Músicos"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Percusión -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Percusión">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Instrumentos"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Tambores -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Tambores">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Percusión"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Teclado -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Teclado">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Instrumentos"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Viento -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Viento">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Instrumentos"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#ÁlbumesMusicales -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#ÁlbumesMusicales"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Acústica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Acústica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#FormasGrabación"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#EnVivo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#EnVivo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#FormasGrabación"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Estudio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Estudio">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#FormasGrabación"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Heavy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Heavy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#GénerosMusicales"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Pop -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Pop">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#GénerosMusicales"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Punk -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Punk">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#GénerosMusicales"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Rock -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Rock">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#GénerosMusicales"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Bandas"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#CompañíasDiscográficas"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#FormasGrabación"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#GénerosMusicales"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Instrumentos"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Músicos"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#ÁlbumesMusicales"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Cuerda"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Percusión"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Teclado"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-15#Viento"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

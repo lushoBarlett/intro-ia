@@ -1,0 +1,371 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/lusho/ontologies/2023/3/Plántulas#"
+     xml:base="http://www.semanticweb.org/lusho/ontologies/2023/3/Plántulas"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+<owl:Ontology rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/Plántulas"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#hoja -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#hoja">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#Plántulas"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#FormaHoja"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#nervaduras -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#nervaduras">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#Plántulas"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#Nervaduras"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#tallo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#tallo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#Plántulas"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#CaracterísticaTallo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#ápice -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#ápice">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#Plántulas"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#TipoÁpice"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#raíz -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#raíz">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#Plántulas"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#CaracterísticaTallo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#CaracterísticaTallo"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#Convolvulus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#Convolvulus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#PlántulasPerennes"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#hoja"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#HojaSagitada"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#nervaduras"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#NervadurasNotables"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#tallo"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#TalloRastrero"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#TalloVoluble"/>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#ápice"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#ÁpiceObtuso"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#FormaHoja -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#FormaHoja"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#HojaAncha -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#HojaAncha">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#FormaHoja"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#HojaLanceolada -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#HojaLanceolada">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#FormaHoja"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#HojaOval -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#HojaOval">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#FormaHoja"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#HojaSagitada -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#HojaSagitada">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#FormaHoja"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#Nervaduras -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#Nervaduras"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#NervadurasNotables -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#NervadurasNotables">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#Nervaduras"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#NervadurasPocoNotables -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#NervadurasPocoNotables">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#Nervaduras"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#PhysalisViscosa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#PhysalisViscosa">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#PlántulasPerennes"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#hoja"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#HojaLanceolada"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#HojaOval"/>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#nervaduras"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#NervadurasPocoNotables"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#Plántulas -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#Plántulas"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#PlántulasAnuales -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#PlántulasAnuales">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#PlántulasLatifoliadas"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#raíz"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#PlántulasLatifoliadas"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#PlántulasPerennes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#PlántulasLatifoliadas -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#PlántulasLatifoliadas">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#Plántulas"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#hoja"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#HojaAncha"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#PlántulasPerennes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#PlántulasPerennes">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#PlántulasLatifoliadas"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#raíz"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#PlántulasLatifoliadas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#TalloAscendente -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#TalloAscendente">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#TalloErecto"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#TalloErecto -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#TalloErecto">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#CaracterísticaTallo"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#TalloRastrero"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#TalloRastrero -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#TalloRastrero">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#CaracterísticaTallo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#TalloVoluble -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#TalloVoluble">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#CaracterísticaTallo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#TipoÁpice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#TipoÁpice"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#WedeliaGlauca -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#WedeliaGlauca">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#PlántulasPerennes"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#hoja"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#HojaLanceolada"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#tallo"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#TalloAscendente"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#ápice"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#ÁpiceAgudo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#ÁpiceAgudo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#ÁpiceAgudo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#TipoÁpice"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#ÁpiceObtuso"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#ÁpiceObtuso -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#ÁpiceObtuso">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-11#TipoÁpice"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

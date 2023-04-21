@@ -1,0 +1,340 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/lusho/ontologies/2023/3/VehículosAereos#"
+     xml:base="http://www.semanticweb.org/lusho/ontologies/2023/3/VehículosAereos"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/VehículosAereos"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#ruta -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#ruta">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#Aviones"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#Ruta"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#sustentación -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#sustentación">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#VehículosAereos"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#SistemasDeSustentación"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#capacidadTransporte -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#capacidadTransporte">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#Aviones"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment>La capacidad se interpreta en litros</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#pasajeros -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#pasajeros">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#Aviones"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#propulsión -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#propulsión">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#VehículosAereos"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#Aviones -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#Aviones">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#VehículosAereos"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#sustentación"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#Alas"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#propulsión"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Las propulsiones pueden ser de diferentes tipos</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#AvionesDeCarga -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#AvionesDeCarga">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#Aviones"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#capacidadTransporte"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10000</xsd:minExclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#pasajeros"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#AvionesDeLínea -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#AvionesDeLínea">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#Aviones"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#ruta"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#RutaPreestablecida"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#pasajeros"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">30</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#AvionesEjecutivos -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#AvionesEjecutivos">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#Aviones"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#ruta"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#RutaPactada"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#pasajeros"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</xsd:minExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">30</xsd:maxExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:intersectionOf>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#Helicópteros -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#Helicópteros">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#VehículosAereos"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#sustentación"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#Rotor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#propulsión"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#Planeadores -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#Planeadores">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#VehículosAereos"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#propulsión"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#Ruta -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#Ruta"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#SistemasDeSustentación -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#SistemasDeSustentación">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#VehículosAereos"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#VehículosAereos -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#VehículosAereos"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#Alas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#Alas"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#Rotor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#Rotor"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#RutaPactada -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#RutaPactada"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#RutaPreestablecida -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#RutaPreestablecida"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#Aviones"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#Helicópteros"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#Planeadores"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#AvionesDeCarga"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#AvionesDeLínea"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-13#AvionesEjecutivos"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
