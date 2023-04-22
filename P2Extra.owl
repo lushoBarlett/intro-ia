@@ -1,0 +1,331 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#"
+     xml:base="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-16="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#adoptóMascota -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#adoptóMascota">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Personas"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Mascotas"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#conoce -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#conoce">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Personas"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Personas"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#esHijoDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#esHijoDe">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#tieneAncestro"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#tieneHijo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#género -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#género">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Personas"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Géneros"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#tieneAncestro -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#tieneAncestro">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#tieneDescendiente"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Personas"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Personas"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#tieneDescendiente -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#tieneDescendiente">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Personas"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Personas"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#tieneHijo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#tieneHijo">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#tieneDescendiente"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Abuelos -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Abuelos">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Personas"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#tieneHijo"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#tieneHijo"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Personas"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Personas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Géneros -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Géneros"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Madres -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Madres">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Personas"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#tieneHijo"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Personas"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#género"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Femenino"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Personas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Mascotas -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Mascotas"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Padres -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Padres">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Personas"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#tieneHijo"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Personas"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#género"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Masculino"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Personas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Personas -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Personas"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#PersonasQueGustanAnimales -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#PersonasQueGustanAnimales">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Personas"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#adoptóMascota"/>
+                        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Personas"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Andrés -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Andrés">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Personas"/>
+        <esHijoDe rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Vivi"/>
+        <género rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Masculino"/>
+        <tieneHijo rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Julia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Coby -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Coby">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Mascotas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Débora -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Débora">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Personas"/>
+        <género rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Femenino"/>
+        <tieneHijo rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Julia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Femenino -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Femenino">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Géneros"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Julia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Julia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Personas"/>
+        <adoptóMascota rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Coby"/>
+        <género rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Femenino"/>
+        <tieneHijo rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#RomJR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Masculino -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Masculino">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Géneros"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#RomJR -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#RomJR">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Personas"/>
+        <género rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Masculino"/>
+        <tieneHijo rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#RomJRJR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#RomJRJR -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#RomJRJR">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Personas"/>
+        <género rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Masculino"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Vivi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Vivi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Personas"/>
+        <género rdf:resource="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Femenino"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Géneros"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Mascotas"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lusho/ontologies/2023/3/untitled-ontology-16#Personas"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
